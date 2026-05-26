@@ -315,34 +315,37 @@ clear: both;
         .online-widget {
             border: 1.5px solid #d017d9;
             background-color: #000;
-            width: 130px;
+            width: 170px;
+            height: auto;
             text-align: center;
-            padding: 5px;
-            font-weight: bold;
+            padding: 8px;
         }
-        .status-text[data-status="im here"] {
+        .status-text[data-status="online"] {
             color: #0beb7f;
-            text-shadow: 1px 1px 2px #12e16f, 0 0 25px #0c9561, 0 0 5px rgb(16, 138, 83), 0 0 10px #0c8846, 1px 1px 4px #15e673, 0px 0px 20px #15e673 !important;
+            text-shadow: 1px 1px 20px #12e16f, 0 0 25px #12bd7b, 0 0 5px rgb(12, 89, 54), 0 0 10px #14874a, 1px 1px 4px #15e673, 0px 0px 20px #15e673 !important;
             font-family: "MS UI Gothic";
             -webkit-font-smoothing: none;
             -moz-osx-font-smoothing: grayscale;
             font-smooth: never;
-            font-size: 30px;
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: bold;
+
         }
         .status-text[data-status="offline"] {
             color: #ff0000; 
-            text-shadow: 1px 1px 2px #ff0000, 0 0 10px #b10e0e, 0 0 5px #700d22 !important; 
+            text-shadow: 1px 1px 2px #ff0000, 0 0 10px #b10e0e, 0 0 5px #700d22, 0 0 20px #ab1133, 1px 1px 15px #ff0000 !important; 
             font-family: "MS UI Gothic";
             -webkit-font-smoothing: none;
             -moz-osx-font-smoothing: grayscale;
             font-smooth: never;
-            font-size: 20px;
+            font-size: 32px;
             font-weight: normal;
+            text-transform: uppercase;
+            font-weight: bold;
+
 }
         
-        
-
-
  </style>
  </head>
  
@@ -414,7 +417,7 @@ clear: both;
   <main>
     <div>
         <div class="online-widget">
- <div class="status-text" data-status="im here"> im here</div>
+   <div class="status-text" data-status="online"> online</div>
         </div>
 <br><br>
 <div class="blink" style="color: #be16b0; font-size: 15px; font-family: tahoma;">

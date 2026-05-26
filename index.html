@@ -315,15 +315,30 @@ clear: both;
         .online-widget {
             border: 1.5px solid #d017d9;
             background-color: #000;
+            width: 130px;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
         }
-        .neon {
+        .status-text[data-status="im here"] {
             color: #0beb7f;
             text-shadow: 1px 1px 2px #12e16f, 0 0 25px #0c9561, 0 0 5px rgb(16, 138, 83), 0 0 10px #0c8846, 1px 1px 4px #15e673, 0px 0px 20px #15e673 !important;
             font-family: "MS UI Gothic";
             -webkit-font-smoothing: none;
             -moz-osx-font-smoothing: grayscale;
             font-smooth: never;
+            font-size: 30px;
         }
+        .status-text[data-status="offline"] {
+            color: #ff0000; 
+            text-shadow: 1px 1px 2px #ff0000, 0 0 10px #b10e0e, 0 0 5px #700d22 !important; 
+            font-family: "MS UI Gothic";
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: grayscale;
+            font-smooth: never;
+            font-size: 20px;
+            font-weight: normal;
+}
         
         
 
@@ -398,6 +413,10 @@ clear: both;
   
   <main>
     <div>
+        <div class="online-widget">
+ <div class="status-text" data-status="im here"> im here</div>
+        </div>
+<br><br>
 <div class="blink" style="color: #be16b0; font-size: 15px; font-family: tahoma;">
     ~~~ BIENVIENUE!!! TERVETULOA!!! WELCOME!!! ~~~
 </div>
@@ -502,9 +521,7 @@ clear: both;
     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=giadelarue" defer></script>   
 </div>
 <br><br>
-<div class="online-widget">
- <h2 class="neon"> IM HERE</h2> im here </div>
-<br><br>
+
 <div class="to-do-list">
             <h1 style="text-align: right; color:#be16b0; font-size: 20px;"> to-do list:</h1>
                 <p style="text-align: center; color:#be16b0;">draw a pic for flip diary</p>

@@ -21,4 +21,4 @@ jobs:
           git config --global user.email "hi@devcomp.xyz" # Replace with an email associated to your GitHub Account.
           git config --global user.name "StatsBot"
           git diff --quiet || (git add -u && git commit -m "🚀 Update Discord Status")
-          git push                    
+          git push               

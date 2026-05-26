@@ -15,8 +15,6 @@ jobs:
         with:
           file: index.html
           id: "851086728634957855"
-          online: "im here"
-          offline: "offline"
       - name: Commit and push if there are changes
         run: |-
           git diff

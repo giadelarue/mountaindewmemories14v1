@@ -68,6 +68,7 @@ section {
     padding: 0;
 }
  * {box-sizing: border-box;}
+
 leftnav {
     flex: 0 0 20%;
     width: 20%;
@@ -220,6 +221,7 @@ hr{
 #statuscafe {
     padding: 1em;
     border: 1px solid #83eb0b;
+    background-color: #000;
 }
 
 #statuscafe-username {
@@ -293,6 +295,7 @@ clear: both;
             height: 270px; 
             padding:30px;
             overflow-y: auto;
+            background-color: #000;
         }
         .border {
             border: 1px solid #59bf2d;
@@ -308,6 +311,18 @@ clear: both;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+        }
+        .online-widget {
+            border: 1.5px solid #d017d9;
+            background-color: #000;
+        }
+        .neon {
+            color: #0beb7f;
+            text-shadow: 1px 1px 2px #12e16f, 0 0 25px #0c9561, 0 0 5px rgb(16, 138, 83), 0 0 10px #0c8846, 1px 1px 4px #15e673, 0px 0px 20px #15e673 !important;
+            font-family: "MS UI Gothic";
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: grayscale;
+            font-smooth: never;
         }
         
         
@@ -483,10 +498,12 @@ clear: both;
 
 <div class="thought-container">
  <img src="https://pixelsafari.neocities.org/dividers/animal/bunny2.gif" style="width: 170px !important; height: auto !important;"/>
-    <div class="thought-header"><h2>statue</h2></div>
+    <div class="thought-header"><h2>status</h2></div>
     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=giadelarue" defer></script>   
 </div>
-Status: 🔴
+<br><br>
+<div class="online-widget">
+ <h2 class="neon"> IM HERE</h2> im here </div>
 <br><br>
 <div class="to-do-list">
             <h1 style="text-align: right; color:#be16b0; font-size: 20px;"> to-do list:</h1>

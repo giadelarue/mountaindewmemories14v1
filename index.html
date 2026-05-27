@@ -434,7 +434,7 @@ clear: both;
   <main>
     <div>
         <div class="online-widget">
-           <span id="discord-emoji" style="display:none;">🟢</span>
+           <span id="discord-emoji" style="display:none;">🟡</span>
             <div id="status-display" class="status-text"></div>
         </div>
 <br><br>
@@ -598,7 +598,7 @@ clear: both;
         if (emojiElement && displayElement) {
             const emoji = emojiElement.textContent.trim();
 
-        if (emoji === "🟢") {
+        if (emoji === "🟡") {
                 displayElement.setAttribute("data-status", "online");
                 displayElement.textContent = "online";
             }

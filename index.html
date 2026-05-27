@@ -434,7 +434,8 @@ clear: both;
   <main>
     <div>
         <div class="online-widget">
-           🟡
+           <span id="discord-emoji" style="display:none;">🟢</span>
+            <div id="status-display" class="status-text"></div>
         </div>
 <br><br>
 <div class="blink" style="color: #be16b0; font-size: 15px; font-family: tahoma;">
@@ -588,6 +589,25 @@ clear: both;
 <p class="text2"><mark  style="background-color: #000; color: #f5d12ee9;">&copy; giadelarue // 2025 // from Saigon</mark></p> 
  </div>
   </div>
-  
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const emojiElement = document.getElementById("discord-emoji");
+        const displayElement = document.getElementById("status-display");
+        
+        if (emojiElement && displayElement) {
+            const emoji = emojiElement.textContent.trim();
+
+        if (emoji === "🟢") {
+                displayElement.setAttribute("data-status", "online");
+                displayElement.textContent = "online";
+            }
+        else {
+                displayElement.setAttribute("data-status", "offline");
+                displayElement.textContent = "offline";
+            }
+        }
+    });
+  </script>
  </body>
 </html>

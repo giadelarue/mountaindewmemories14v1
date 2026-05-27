@@ -593,7 +593,9 @@ clear: both;
        document.addEventListener("DOMContentLoaded", function() {
         const displayElement = document.getElementById("status-display");
         if (displayElement) {
-            fetch('status.txt')
+            const cacheBuster = '?t=' + new Date().getTime();
+            
+            fetch('status.txt' + cacheBuster)
                 .then(response => response.text())
                 .then(text => {
                     if (text.includes("🟢")) {

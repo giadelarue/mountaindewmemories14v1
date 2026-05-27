@@ -598,7 +598,9 @@ clear: both;
         if (emojiElement && displayElement) {
             const emoji = emojiElement.textContent.trim();
 
-        if (emojiText.includes("🟡")) {
+        const greenCircle = "\u{1F7E2}"; 
+            
+            if (emojiText.includes(greenCircle)) {
                 displayElement.setAttribute("data-status", "online");
                 displayElement.textContent = "online";
             } else {

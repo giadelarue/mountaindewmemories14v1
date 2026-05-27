@@ -595,7 +595,7 @@ clear: both;
         if (displayElement) {
             const cacheBuster = '?t=' + new Date().getTime();
             
-            const githubRawUrl = 'https://raw.githubusercontent.com/giadelarue/mountaindewmemories14v1/refs/heads/main/status.txt' + cacheBuster)
+            fetch('status.txt' + cacheBuster)
                 .then(response => response.text())
                 .then(text => {
                     if (text.includes("🟢")) {

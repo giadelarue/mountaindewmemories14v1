@@ -434,8 +434,7 @@ clear: both;
   <main>
     <div>
         <div class="online-widget">
-           <span id="discord-emoji" hidden;">🟡</span>
-            <div id="status-display" class="status-text"></div>
+    <div id="status-display" class="status-text"></div>
         </div>
 <br><br>
 <div class="blink" style="color: #be16b0; font-size: 15px; font-family: tahoma;">
@@ -591,22 +590,24 @@ clear: both;
   </div>
 
 <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        const emojiElement = document.getElementById("discord-emoji");
+       document.addEventListener("DOMContentLoaded", function() {
         const displayElement = document.getElementById("status-display");
-        
-        if (emojiElement && displayElement) {
-            const emoji = emojiElement.textContent.trim();
-
-        const greenCircle = "\u{1F7E2}"; 
-            
-            if (emojiText.includes(greenCircle)) {
-                displayElement.setAttribute("data-status", "online");
-                displayElement.textContent = "online";
-            } else {
-                displayElement.setAttribute("data-status", "offline");
-                displayElement.textContent = "offline";
-            }
+        if (displayElement) {
+            fetch('status.txt')
+                .then(response => response.text())
+                .then(text => {
+                    if (text.includes("🟢")) {
+                        displayElement.setAttribute("data-status", "online");
+                        displayElement.textContent = "online";
+                    } else {
+                        displayElement.setAttribute("data-status", "offline");
+                        displayElement.textContent = "offline";
+                    }
+                })
+                .catch(() => {
+                    displayElement.setAttribute("data-status", "offline");
+                    displayElement.textContent = "offline";
+                });
         }
     });
   </script>
